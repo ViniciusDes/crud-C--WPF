@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dadosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dados.dbo.Contato' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Contato">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="255" />
+    <Property Name="CPF" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="dadosModelStoreContainer">
+    <EntitySet Name="Contato" EntityType="Self.Contato" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Contato].[Id] AS [Id], 
+    [Contato].[Nome] AS [Nome], 
+    [Contato].[CPF] AS [CPF]
+    FROM [dbo].[Contato] AS [Contato]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
