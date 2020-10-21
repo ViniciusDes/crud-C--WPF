@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudWPF.view"
         mc:Ignorable="d"
-        Title="ListarCliente" Height="321.081" Width="868.107" WindowStartupLocation="CenterScreen">
-    <Grid Margin="0,0,138,141">
+        Title="ListarCliente" Height="509.5" Width="823.5" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,134,115">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid HorizontalAlignment="Left" Height="287" Margin="0,0,-134,-138" VerticalAlignment="Top" Width="856" x:Name="dtGridLista" SelectionChanged="dtGridLista_SelectionChanged" 
+        <DataGrid Margin="0,0,-131,-58" x:Name="dtGridLista" SelectionChanged="dtGridLista_SelectionChanged" 
                   x:FieldModifier="public" AutoGenerateColumns="True" Grid.ColumnSpan="2" RenderTransformOrigin="0.498,0.605"/>
 
     </Grid>

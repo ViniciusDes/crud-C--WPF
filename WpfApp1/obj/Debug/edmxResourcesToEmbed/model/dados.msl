@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="dadosModelStoreContainer" CdmEntityContainer="dadosEntities4">
-    <EntitySetMapping Name="Contato">
-      <EntityTypeMapping TypeName="dadosModel.Contato">
-        <MappingFragment StoreEntitySet="Contato">
+  <EntityContainerMapping StorageEntityContainer="dadosModelStoreContainer" CdmEntityContainer="dadosEntities">
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="dadosModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
           <ScalarProperty Name="CPF" ColumnName="CPF" />

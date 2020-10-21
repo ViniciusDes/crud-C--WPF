@@ -13,10 +13,10 @@ namespace CrudWPF.model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dadosEntities4 : DbContext
+    public partial class dadosEntities : DbContext
     {
-        public dadosEntities4()
-            : base("name=dadosEntities4")
+        public dadosEntities()
+            : base("name=dadosEntities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace CrudWPF.model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Contato> Contato { get; set; }
+        public virtual DbSet<Cliente> Cliente { get; set; }
     }
 }

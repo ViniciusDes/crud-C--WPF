@@ -12,7 +12,7 @@ namespace CrudWPF.model
     using System;
     using System.Collections.Generic;
     
-    public partial class Contato
+    public partial class Cliente
     {
         public int ID { get; set; }
         public string Nome { get; set; }

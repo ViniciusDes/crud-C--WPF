@@ -5,7 +5,7 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="dadosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Contato">
+        <EntityType Name="Cliente">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -22,14 +22,14 @@
           <Property Name="Numero" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityContainer Name="dadosModelStoreContainer">
-          <EntitySet Name="Contato" EntityType="Self.Contato" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dadosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Contato">
+        <EntityType Name="Cliente">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -45,18 +45,18 @@
           <Property Name="Complemento" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Numero" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="dadosEntities4" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Contato" EntityType="Self.Contato" />
+        <EntityContainer Name="dadosEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="dadosModelStoreContainer" CdmEntityContainer="dadosEntities4">
-          <EntitySetMapping Name="Contato">
-            <EntityTypeMapping TypeName="dadosModel.Contato">
-              <MappingFragment StoreEntitySet="Contato">
+        <EntityContainerMapping StorageEntityContainer="dadosModelStoreContainer" CdmEntityContainer="dadosEntities">
+          <EntitySetMapping Name="Cliente">
+            <EntityTypeMapping TypeName="dadosModel.Cliente">
+              <MappingFragment StoreEntitySet="Cliente">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Nome" ColumnName="Nome" />
                 <ScalarProperty Name="CPF" ColumnName="CPF" />

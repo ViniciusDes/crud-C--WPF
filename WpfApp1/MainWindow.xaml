@@ -5,17 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" HorizontalAlignment="Center" WindowStyle="SingleBorderWindow" WindowState="Normal" WindowStartupLocation="CenterScreen">
-    <Grid Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}">
+        Title="Menu principal" Height="450" Width="800" HorizontalAlignment="Center" WindowStyle="SingleBorderWindow" WindowState="Normal" WindowStartupLocation="CenterScreen" Background="#FFE23333" Foreground="#FF110303">
+    <Grid Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="81*"/>
             <ColumnDefinition Width="503*"/>
             <ColumnDefinition Width="208*"/>
             <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Cadastro de Clientes" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Click="Button_Click" Grid.ColumnSpan="2"/>
-        <Button Content="Movimento de estoque" HorizontalAlignment="Left" Margin="146,0,0,0" VerticalAlignment="Top" Click="Button_Click" Grid.Column="1"/>
-        <Button Content="Pesquisar Clientes" HorizontalAlignment="Left" Margin="42,0,0,0" VerticalAlignment="Top" Click="Button_Click_1" RenderTransformOrigin="1.264,0.603" Grid.Column="1"/>
+        <Button Content="Cadastro de Clientes" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Click="Button_Click" Grid.ColumnSpan="2" Height="32"/>
+        <Button Content="Pesquisar Clientes" HorizontalAlignment="Left" Margin="42,0,0,0" VerticalAlignment="Top" Click="Button_Click_1" RenderTransformOrigin="1.264,0.603" Grid.Column="1" Width="147" Height="32"/>
 
     </Grid>
 </Window>

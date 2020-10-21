@@ -31,24 +31,48 @@ namespace CrudWPF.view
         }
         public void LoadingClientes()
         {
-            using (dadosEntities4 db = new dadosEntities4())
+            using (dadosEntities db = new dadosEntities())
             {
-                var contatos = db.Contato.ToList();
-                dtGridLista.ItemsSource = contatos;
+                var clientes = db.Cliente.ToList();
+                dtGridLista.ItemsSource = clientes;
             }
         }
 
         private void dtGridLista_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var contato = new Contato();
 
-            var a = dtGridLista.SelectedValue;
-
-
-
+            Object _cliente = dtGridLista.SelectedValue;
+            var id = _cliente.GetType().GetProperty("ID").GetValue(_cliente, null );
+            var nome = _cliente.GetType().GetProperty("Nome").GetValue(_cliente, null );
+            var CPF = _cliente.GetType().GetProperty("CPF").GetValue(_cliente, null );
+            var Telefone = _cliente.GetType().GetProperty("Telefone").GetValue(_cliente, null );
+            var CEP = _cliente.GetType().GetProperty("CEP").GetValue(_cliente, null );
+            var Cidade = _cliente.GetType().GetProperty("Cidade").GetValue(_cliente, null );
+            var Estado = _cliente.GetType().GetProperty("Estado").GetValue(_cliente, null );
+            var Bairro = _cliente.GetType().GetProperty("Bairro").GetValue(_cliente, null );
+            var Logradouro = _cliente.GetType().GetProperty("Logradouro").GetValue(_cliente, null );
+            var Complemento = _cliente.GetType().GetProperty("Complemento").GetValue(_cliente, null );
+            var Numero = _cliente.GetType().GetProperty("Numero").GetValue(_cliente, null );
+        
+            
 
             var viewCadClientes = new CadCliente();
+                viewCadClientes.txtId.Text = id.ToString();
+                viewCadClientes.txtName.Text = nome.ToString();
+                viewCadClientes.txtCPF.Text = CPF.ToString();
+                viewCadClientes.txtTelefone.Text = Telefone.ToString();
+                viewCadClientes.txtCep.Text = CEP.ToString();
+                viewCadClientes.txtCidade.Text = Cidade.ToString();
+                viewCadClientes.txtEstado.Text = Estado.ToString();
+                viewCadClientes.txtBairro.Text = Bairro.ToString();
+                viewCadClientes.txtLogradouro.Text = Logradouro.ToString();
+                viewCadClientes.txtComplemento.Text = Complemento.ToString();
+                viewCadClientes.txtNumero.Text = Numero.ToString();
+
             viewCadClientes.Show();
+            viewCadClientes.btnDeletar.IsEnabled = true;
+            viewCadClientes.btnNovoCliente.IsEnabled = true;
+            this.Close();
         }
     }
 }
